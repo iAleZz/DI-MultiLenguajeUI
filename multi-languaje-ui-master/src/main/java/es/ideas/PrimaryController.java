@@ -49,19 +49,6 @@ public class PrimaryController implements Initializable {
             "viernes", "sábado", "domingo"};
         cbSemana.setItems(FXCollections.observableArrayList(dias_semana));
 
-        //Muestra los valores de Locale cada vez que se carga la escena
-        Locale localeActual = Locale.getDefault();
-        System.out.println("Locale Seleccionado: \n" +
-                " getLanguage: " + localeActual.getLanguage() +
-                " - getCountry: " + localeActual.getCountry() +
-                " - getDisplayName: " + localeActual.getDisplayName()+
-                "\n - getDisplayVariant: " + localeActual.getDisplayVariant()+
-                " - getDisplayCountry: " + localeActual.getDisplayCountry()+
-                " - getDisplayLanguage: " + localeActual.getDisplayLanguage() +
-                "\n - getISO3Country: " + localeActual.getISO3Country() + 
-                " - getISO3Languaje: " + localeActual.getISO3Language() + 
-                " - getDisplayScript: " + localeActual.getDisplayScript());
-        
         //Crear un ToggleGroup para agrupar los ToggleButton
         //Sólo puede haber uno seleccionado cada vez.
         ToggleGroup tg= new ToggleGroup();
