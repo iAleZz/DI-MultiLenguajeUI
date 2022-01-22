@@ -69,7 +69,8 @@ public class PrimaryController implements Initializable {
                        break;  
                    case "Inglés(en-Us)":
                        Locale.setDefault(Locale.US);
-                       System.out.println("Has seleccionado idioma INGLÉS - ESTADOS UNIDOS");
+                       System.out.println("Has seleccionado idioma INGLÉS - "
+                               + "ESTADOS UNIDOS");
                        break;  
                    case "Francés":
                        Locale.setDefault(Locale.FRENCH);
@@ -77,7 +78,8 @@ public class PrimaryController implements Initializable {
                        break;
                    case "Inglés(en-Gb)":
                        Locale.setDefault(Locale.UK);
-                       System.out.println("Has seleccionado idioma FRANCÉS");
+                       System.out.println("Has seleccionado idioma INGLÉS -"
+                               + "REINO UNIDO");
                        break;
                    default:
                        Locale.setDefault(new Locale("es"));
