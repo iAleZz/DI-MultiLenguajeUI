@@ -45,8 +45,14 @@ public class PrimaryController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         //Inicialización del ComboBox con los días de la semana
-        String dias_semana[] = {"lunes", "martes", "miércoles", "jueves",
-            "viernes", "sábado", "domingo"};
+        //Obtenemos los string del paquete de recursos mediante su "key"
+        String dias_semana[] = {rb.getString("lunes"), 
+                                rb.getString("martes"),
+                                rb.getString("miercoles"),
+                                rb.getString("jueves"),
+                                rb.getString("viernes"),
+                                rb.getString("sabado"),
+                                rb.getString("domingo")};
         cbSemana.setItems(FXCollections.observableArrayList(dias_semana));
 
         //Crear un ToggleGroup para agrupar los ToggleButton
@@ -55,7 +61,7 @@ public class PrimaryController implements Initializable {
         tg.getToggles().addAll(tgbIt,tgbEnUs,tgbSp,tgbFr,tgbEnUk);
         
         /**
-         * Listener para cambiar el idioma
+         * Listener para cambiar el idioma obteniendo el texto de los botones
          **/        
         tg.selectedToggleProperty().addListener((obs,oldValue,newValue)->{
             if (newValue != null ){
